@@ -6,19 +6,18 @@
     <title>To-Do List</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    
     <div class="app-container">
-        <h1>To-Do List</h1>
-        <div class="todo-input container">
-            <input id="todo-title" type="text" placeholder="Add a new task" />
-            <input id="date-picker" type="date" />
-            <button onclick=""addTodo()>Add task</button>
+        <h1>📚 To-Do List</h1>
+        <div class="todo-input-card">
+            <div class="todo-input-container">
+                <input id="todo-title" type="text" placeholder="Add a new task" />
+                <input id="date-picker" type="date" />
+            </div>
+            <button class="add-task-button" onclick="addTodo()">Add Task</button>
         </div>
         <div id="todo-list" class="todo-list"></div>
     </div>
-
     <script src="js/script.js"></script>
 </body>
 </html>
