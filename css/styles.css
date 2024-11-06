@@ -69,7 +69,12 @@ input[type="date"]:focus {
     box-shadow: 0 0 5px rgba(16, 29, 16, 0.4);
     outline: none;
 }
-
+/* Estilo para la fecha */
+.todo-item .date {
+    font-size: 12px;
+    color: #7a997a;
+    margin-bottom: 8px;
+}
 .add-task-button {
     width: 100%;
     padding: 12px 0;
@@ -97,14 +102,15 @@ input[type="date"]:focus {
 
 .todo-item {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
     padding: 12px 15px;
     border: 1px solid #dcdcdc;
     border-radius: 8px;
     background-color: #f5f9f3;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s, background-color 0.2s;
+    
 }
 
 .todo-item:hover {
@@ -112,29 +118,58 @@ input[type="date"]:focus {
     background-color: #ecf3e7;
 }
 
-.todo-item.completed {
-    text-decoration: line-through;
-    color: #7a997a;
-    background-color: #d9e8d3;
+
+.todo-item span.completed {
+    text-decoration: line-through; 
+    color: #808080; /
 }
 
 .todo-item span {
     cursor: pointer;
     color: #2f4f4f;
     font-weight: 500;
+    word-wrap: break-word;
+    font-size: 16px;
+    padding: 5px 0;
+    display: inline-block; 
+}
+
+.todo-item .todo-item-buttons {
+    display: flex; 
+    gap: 10px;   
+    justify-content: center;  
+    margin-top: 10px; 
 }
 
 .todo-item button {
     background-color: #d96060;
-    padding: 6px 10px;
-    font-size: 13px;
+    padding: 8px 16px;
+    font-size: 14px;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s;
 }
 
 .todo-item button:hover {
+    background-color: #cf2626;
+}
+
+.todo-item .edit-button {
+    background-color: #4CAF50;
+}
+
+.todo-item .delete-button {
+    background-color: #f44336;
+}
+
+.todo-item .completed-button {
+    background-color: #d96060;
+}
+
+.todo-item .completed-button:hover {
     background-color: #c14f4f;
 }
+
+
